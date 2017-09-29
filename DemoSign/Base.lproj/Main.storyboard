@@ -1,24 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-DemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="367-Fo-X9E">
+                                <rect key="frame" x="127.5" y="40" width="120" height="120"/>
+                                <color key="backgroundColor" red="0.25490196078431371" green="0.36078431372549019" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="1Uu-i0-q4b"/>
+                                    <constraint firstAttribute="height" constant="120" id="519-Qu-yNK"/>
+                                </constraints>
+                                <state key="normal" image="f"/>
+                                <connections>
+                                    <action selector="onBtnFBPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f8E-zT-shq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4v-K9-6YI">
+                                <rect key="frame" x="138" y="210" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.915308031084624" green="0.054167799451572615" blue="0.047908232943719195" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="OPc-FE-5Zu"/>
+                                    <constraint firstAttribute="width" constant="100" id="eek-4F-ncn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="19"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBtnSignInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Jt-1f-EUZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gs3-zF-NlU">
+                                <rect key="frame" x="137" y="270" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.91530803110000003" green="0.054167799449999998" blue="0.047908232940000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="iRl-qx-pSj"/>
+                                    <constraint firstAttribute="height" constant="30" id="zaJ-ch-QbN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="19"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBtnSignOutPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="htv-fH-ptj"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="T4v-K9-6YI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D3L-tf-pw0"/>
+                            <constraint firstItem="gs3-zF-NlU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JVj-l7-12H"/>
+                            <constraint firstItem="gs3-zF-NlU" firstAttribute="top" secondItem="T4v-K9-6YI" secondAttribute="bottom" constant="30" id="bYu-2w-59Q"/>
+                            <constraint firstItem="T4v-K9-6YI" firstAttribute="top" secondItem="367-Fo-X9E" secondAttribute="bottom" constant="50" id="cle-eh-Fkj"/>
+                            <constraint firstItem="367-Fo-X9E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ezz-0u-kHt"/>
+                            <constraint firstItem="367-Fo-X9E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="xqX-eM-Ri7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="f" width="352" height="328"/>
+    </resources>
 </document>

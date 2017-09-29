@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6BC5005FD36666FCA46F5D38 /* libPods-DemoSign.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA1F176D48BA71548EF29E8F /* libPods-DemoSign.a */; };
 		EEF6B2F81F7E16E000D0E69A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF6B2F71F7E16E000D0E69A /* AppDelegate.m */; };
 		EEF6B2FB1F7E16E000D0E69A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF6B2FA1F7E16E000D0E69A /* ViewController.m */; };
 		EEF6B2FE1F7E16E000D0E69A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEF6B2FC1F7E16E000D0E69A /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E78C68D5617DB5CBFE196B7 /* Pods-DemoSign.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSign.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoSign/Pods-DemoSign.debug.xcconfig"; sourceTree = "<group>"; };
+		CA1F176D48BA71548EF29E8F /* libPods-DemoSign.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoSign.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEF6B2F31F7E16E000D0E69A /* DemoSign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoSign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEF6B2F61F7E16E000D0E69A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EEF6B2F71F7E16E000D0E69A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +29,8 @@
 		EEF6B3021F7E16E000D0E69A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EEF6B3041F7E16E000D0E69A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEF6B3051F7E16E000D0E69A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EEF6B30F1F7E32FA00D0E69A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FB48B93A94299B5189D22E22 /* Pods-DemoSign.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSign.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoSign/Pods-DemoSign.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +38,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BC5005FD36666FCA46F5D38 /* libPods-DemoSign.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4130BFD3CE874CF5D9D77BDC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7E78C68D5617DB5CBFE196B7 /* Pods-DemoSign.debug.xcconfig */,
+				FB48B93A94299B5189D22E22 /* Pods-DemoSign.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		907B969D0F3B55AFC0A938CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA1F176D48BA71548EF29E8F /* libPods-DemoSign.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EEF6B2EA1F7E16E000D0E69A = {
 			isa = PBXGroup;
 			children = (
 				EEF6B2F51F7E16E000D0E69A /* DemoSign */,
 				EEF6B2F41F7E16E000D0E69A /* Products */,
+				4130BFD3CE874CF5D9D77BDC /* Pods */,
+				907B969D0F3B55AFC0A938CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +83,7 @@
 		EEF6B2F51F7E16E000D0E69A /* DemoSign */ = {
 			isa = PBXGroup;
 			children = (
+				EEF6B30C1F7E185E00D0E69A /* Frameworks */,
 				EEF6B2F61F7E16E000D0E69A /* AppDelegate.h */,
 				EEF6B2F71F7E16E000D0E69A /* AppDelegate.m */,
 				EEF6B2F91F7E16E000D0E69A /* ViewController.h */,
@@ -66,9 +92,17 @@
 				EEF6B2FF1F7E16E000D0E69A /* Assets.xcassets */,
 				EEF6B3011F7E16E000D0E69A /* LaunchScreen.storyboard */,
 				EEF6B3041F7E16E000D0E69A /* Info.plist */,
+				EEF6B30F1F7E32FA00D0E69A /* GoogleService-Info.plist */,
 				EEF6B3051F7E16E000D0E69A /* main.m */,
 			);
 			path = DemoSign;
+			sourceTree = "<group>";
+		};
+		EEF6B30C1F7E185E00D0E69A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,9 +112,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EEF6B3091F7E16E000D0E69A /* Build configuration list for PBXNativeTarget "DemoSign" */;
 			buildPhases = (
+				D89260B6DA0BEE0699381BB4 /* [CP] Check Pods Manifest.lock */,
 				EEF6B2EF1F7E16E000D0E69A /* Sources */,
 				EEF6B2F01F7E16E000D0E69A /* Frameworks */,
 				EEF6B2F11F7E16E000D0E69A /* Resources */,
+				AEA1960FD59263724867EB0F /* [CP] Embed Pods Frameworks */,
+				F7EF6D6FB06B9C4DF5FF3DEF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,6 +173,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AEA1960FD59263724867EB0F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoSign/Pods-DemoSign-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D89260B6DA0BEE0699381BB4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F7EF6D6FB06B9C4DF5FF3DEF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoSign/Pods-DemoSign-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EEF6B2EF1F7E16E000D0E69A /* Sources */ = {
@@ -276,11 +361,13 @@
 		};
 		EEF6B30A1F7E16E000D0E69A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E78C68D5617DB5CBFE196B7 /* Pods-DemoSign.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9CCA576RL3;
 				INFOPLIST_FILE = DemoSign/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hardcode.DemoSign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -290,11 +377,13 @@
 		};
 		EEF6B30B1F7E16E000D0E69A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB48B93A94299B5189D22E22 /* Pods-DemoSign.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9CCA576RL3;
 				INFOPLIST_FILE = DemoSign/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hardcode.DemoSign;
 				PRODUCT_NAME = "$(TARGET_NAME)";

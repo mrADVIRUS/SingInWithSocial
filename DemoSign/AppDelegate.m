@@ -7,16 +7,28 @@
 //
 
 #import "AppDelegate.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <GoogleSignIn/GoogleSignIn.h>
 
-@interface AppDelegate ()
+#define kClientID  @"883714532220-2qvkth6r9jpd7f7l730p9dir90eh22h5.apps.googleusercontent.com"
+#define FACEBOOK_SCHEME @"fb134450397181355"
+#define GOOGLE_SCHEME @"com.googleusercontent.apps.883714532220-2qvkth6r9jpd7f7l730p9dir90eh22h5"
+
+@interface AppDelegate () 
 
 @end
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [[FBSDKApplicationDelegate sharedInstance] application:application
+                             didFinishLaunchingWithOptions:launchOptions];
+    
+    //cofigure Google SignIn
+    [GIDSignIn sharedInstance].clientID = kClientID;
+    
     return YES;
 }
 
@@ -45,6 +57,32 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    NSLog(@"Incoming Scheme = %@", [url scheme]);
+    if ([[url scheme] isEqualToString:FACEBOOK_SCHEME]) {
+        return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                              openURL:url
+                                                    sourceApplication:sourceApplication
+                                                           annotation:annotation];
+    } else if ([[url scheme] isEqualToString:GOOGLE_SCHEME]) {
+        return [[GIDSignIn sharedInstance] handleURL:url
+                                   sourceApplication:sourceApplication
+                                          annotation:annotation];
+    }
+    
+    return YES;
+//
+//    BOOL isFBHandle = [[FBSDKApplicationDelegate sharedInstance] application:application
+//                                                                     openURL:url
+//                                                           sourceApplication:sourceApplication
+//                                                                  annotation:annotation];
+//    BOOL isGoogleHandle = [[GIDSignIn sharedInstance] handleURL:url
+//                                              sourceApplication:sourceApplication
+//                                                     annotation:annotation];
+//    return isFBHandle || isGoogleHandle;
 }
 
 
